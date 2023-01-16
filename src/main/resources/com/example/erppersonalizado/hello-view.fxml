@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.main.controller.ControllerHospital">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.erppersonalizado.Controlador.HelloController">
     <children>
         <AnchorPane layoutY="-1.0" prefHeight="47.0" prefWidth="910.0">
             <children>
@@ -31,40 +31,40 @@
                     </font>
                 </Label>
                 <TableView fx:id="tvTabMed" layoutX="33.0" layoutY="376.0" prefHeight="195.0" prefWidth="888.0" />
-                <Label layoutX="50.0" layoutY="181.0" stylesheets="@../../../img/boton.css" text="Primer apellido:">
+                <Label layoutX="50.0" layoutY="181.0" stylesheets="" text="Primer apellido:">
                     <font>
                         <Font name="Arial Bold" size="16.0" />
                     </font>
                 </Label>
-                <Label layoutX="145.0" layoutY="98.0" prefHeight="16.0" prefWidth="54.0" stylesheets="@../../../img/boton.css" text="ID:">
+                <Label layoutX="145.0" layoutY="98.0" prefHeight="16.0" prefWidth="54.0" stylesheets="" text="ID:">
                     <font>
                         <Font name="Arial Bold" size="16.0" />
                     </font>
                 </Label>
-                <Label layoutX="113.0" layoutY="276.0" stylesheets="@../../../img/boton.css" text="Cargo:">
+                <Label layoutX="113.0" layoutY="276.0" stylesheets="" text="Cargo:">
                     <font>
                         <Font name="Arial Bold" size="16.0" />
                     </font>
                 </Label>
-                <Label layoutX="104.0" layoutY="137.0" stylesheets="@../../../img/boton.css" text="Nombre:">
+                <Label layoutX="104.0" layoutY="137.0" stylesheets="" text="Nombre:">
                     <font>
                         <Font name="Arial Bold" size="16.0" />
                     </font>
                 </Label>
-                <TextField fx:id="tfApe1Med" editable="true" layoutX="182.0" layoutY="176.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfCodMed" editable="true" layoutX="182.0" layoutY="95.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfNombreMed" editable="true" layoutX="182.0" layoutY="134.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfCargo" editable="true" layoutX="182.0" layoutY="273.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
+                <TextField fx:id="tfApe1Med" editable="true" layoutX="182.0" layoutY="176.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfCodMed" editable="true" layoutX="182.0" layoutY="95.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfNombreMed" editable="true" layoutX="182.0" layoutY="134.0" prefHeight="26.0" prefWidth="219.0" />
+                <TextField fx:id="tfCargo" editable="true" layoutX="182.0" layoutY="273.0" prefHeight="26.0" prefWidth="219.0"  />
                 <Label layoutX="435.0" layoutY="98.0" text="Especialidad:">
                     <font>
                         <Font name="Arial Bold" size="16.0" />
                     </font>
                 </Label>
-                <TextField fx:id="tfEspecialidad" editable="true" layoutX="555.0" layoutY="95.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfApe2Med" editable="true" layoutX="182.0" layoutY="224.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfnColegiado" editable="true" layoutX="555.0" layoutY="139.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfObservaciones" editable="true" layoutX="555.0" layoutY="185.0" prefHeight="84.0" prefWidth="261.0" stylesheets="@../../../img/boton.css" />
-                <Label layoutX="33.0" layoutY="227.0" stylesheets="@../../../img/boton.css" text="Segundo apellido: ">
+                <TextField fx:id="tfEspecialidad" editable="true" layoutX="555.0" layoutY="95.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfApe2Med" editable="true" layoutX="182.0" layoutY="224.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfnColegiado" editable="true" layoutX="555.0" layoutY="139.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfObservaciones" editable="true" layoutX="555.0" layoutY="185.0" prefHeight="84.0" prefWidth="261.0"  />
+                <Label layoutX="33.0" layoutY="227.0"  text="Segundo apellido: ">
                     <font>
                         <Font name="Arial Bold" size="16.0" />
                     </font>
