@@ -51,20 +51,20 @@
                         <Font name="Arial Bold" size="16.0" />
                     </font>
                 </Label>
-                <TextField fx:id="tfApe1Med" editable="true" layoutX="182.0" layoutY="176.0" prefHeight="26.0" prefWidth="219.0"  />
-                <TextField fx:id="tfCodMed" editable="true" layoutX="182.0" layoutY="95.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfApe1Med" editable="true" layoutX="182.0" layoutY="176.0" prefHeight="26.0" prefWidth="219.0" />
+                <TextField fx:id="tfCodMed" editable="true" layoutX="182.0" layoutY="95.0" prefHeight="26.0" prefWidth="219.0" />
                 <TextField fx:id="tfNombreMed" editable="true" layoutX="182.0" layoutY="134.0" prefHeight="26.0" prefWidth="219.0" />
-                <TextField fx:id="tfCargo" editable="true" layoutX="182.0" layoutY="273.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfCargo" editable="true" layoutX="182.0" layoutY="273.0" prefHeight="26.0" prefWidth="219.0" />
                 <Label layoutX="435.0" layoutY="98.0" text="Especialidad:">
                     <font>
                         <Font name="Arial Bold" size="16.0" />
                     </font>
                 </Label>
-                <TextField fx:id="tfEspecialidad" editable="true" layoutX="555.0" layoutY="95.0" prefHeight="26.0" prefWidth="219.0"  />
-                <TextField fx:id="tfApe2Med" editable="true" layoutX="182.0" layoutY="224.0" prefHeight="26.0" prefWidth="219.0"  />
-                <TextField fx:id="tfnColegiado" editable="true" layoutX="555.0" layoutY="139.0" prefHeight="26.0" prefWidth="219.0"  />
-                <TextField fx:id="tfObservaciones" editable="true" layoutX="555.0" layoutY="185.0" prefHeight="84.0" prefWidth="261.0"  />
-                <Label layoutX="33.0" layoutY="227.0"  text="Segundo apellido: ">
+                <TextField fx:id="tfEspecialidad" editable="true" layoutX="555.0" layoutY="95.0" prefHeight="26.0" prefWidth="219.0" />
+                <TextField fx:id="tfApe2Med" editable="true" layoutX="182.0" layoutY="224.0" prefHeight="26.0" prefWidth="219.0" />
+                <TextField fx:id="tfnColegiado" editable="true" layoutX="555.0" layoutY="139.0" prefHeight="26.0" prefWidth="219.0" />
+                <TextField fx:id="tfObservaciones" editable="true" layoutX="555.0" layoutY="185.0" prefHeight="84.0" prefWidth="261.0" />
+                <Label layoutX="33.0" layoutY="227.0" text="Segundo apellido: ">
                     <font>
                         <Font name="Arial Bold" size="16.0" />
                     </font>
@@ -79,11 +79,11 @@
                         <Font name="Arial Bold" size="16.0" />
                     </font>
                 </Label>
-                <Button id="idaccept" layoutX="575.0" layoutY="296.0" mnemonicParsing="false" onAction="#pressAceptarMed" prefHeight="58.0" prefWidth="81.0" stylesheets="@../../../img/boton.css">
+                <Button id="idaccept" layoutX="575.0" layoutY="296.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="81.0" >
                     <graphic>
                     </graphic>
                 </Button>
-                <Button id="idcancel" layoutX="710.0" layoutY="296.0" mnemonicParsing="false" onAction="#borrarCamposMed" prefHeight="58.0" prefWidth="81.0" stylesheets="@../../../img/boton.css" />
+                <Button id="idcancel" layoutX="710.0" layoutY="296.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="81.0"  />
             </children>
         </Pane>
         <Pane fx:id="pPaciente" layoutX="3.0" layoutY="56.0" prefHeight="590.0" prefWidth="948.0" visible="false">
@@ -114,27 +114,27 @@
                         <Font name="Arial Bold" size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="tfApe1Paciente" editable="true" layoutX="182.0" layoutY="191.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfSS" editable="true" layoutX="182.0" layoutY="110.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfNomPaciente" editable="true" layoutX="182.0" layoutY="149.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfApe2Paciente" editable="true" layoutX="182.0" layoutY="229.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
+                <TextField fx:id="tfApe1Paciente" editable="true" layoutX="182.0" layoutY="191.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfSS" editable="true" layoutX="182.0" layoutY="110.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfNomPaciente" editable="true" layoutX="182.0" layoutY="149.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfApe2Paciente" editable="true" layoutX="182.0" layoutY="229.0" prefHeight="26.0" prefWidth="219.0"  />
                 <Label layoutX="103.0" layoutY="275.0" text="Domicilio:">
                     <font>
                         <Font name="Arial Bold" size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="tfDomicilio" editable="true" layoutX="182.0" layoutY="270.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfMedicoAs" editable="true" layoutX="592.0" layoutY="229.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfTelefono" editable="true" layoutX="592.0" layoutY="149.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfNHistorial" editable="true" layoutX="592.0" layoutY="192.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfObsPac" editable="true" layoutX="592.0" layoutY="271.0" prefHeight="20.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfProvincia" editable="true" layoutX="182.0" layoutY="312.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <TextField fx:id="tfCP" editable="true" layoutX="182.0" layoutY="351.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
-                <Button id="idcancel" layoutX="733.0" layoutY="337.0" mnemonicParsing="false" onAction="#borrarCamposPac" prefHeight="54.0" prefWidth="61.0" stylesheets="@../../../img/boton.css">
+                <TextField fx:id="tfDomicilio" editable="true" layoutX="182.0" layoutY="270.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfMedicoAs" editable="true" layoutX="592.0" layoutY="229.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfTelefono" editable="true" layoutX="592.0" layoutY="149.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfNHistorial" editable="true" layoutX="592.0" layoutY="192.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfObsPac" editable="true" layoutX="592.0" layoutY="271.0" prefHeight="20.0" prefWidth="219.0"  />
+                <TextField fx:id="tfProvincia" editable="true" layoutX="182.0" layoutY="312.0" prefHeight="26.0" prefWidth="219.0"  />
+                <TextField fx:id="tfCP" editable="true" layoutX="182.0" layoutY="351.0" prefHeight="26.0" prefWidth="219.0"  />
+                <Button id="idcancel" layoutX="733.0" layoutY="337.0" mnemonicParsing="false"  prefHeight="54.0" prefWidth="61.0" >
                     <graphic>
                     </graphic>
                 </Button>
-                <Button id="idaccept" fx:id="bGuardar1" layoutX="587.0" layoutY="337.0" mnemonicParsing="false" onAction="#pressAceptarPac" prefHeight="54.0" prefWidth="61.0" stylesheets="@../../../img/boton.css">
+                <Button id="idaccept" fx:id="bGuardar1" layoutX="587.0" layoutY="337.0" mnemonicParsing="false"  prefHeight="54.0" prefWidth="61.0" >
                     <graphic>
                     </graphic>
                 </Button>
@@ -168,7 +168,7 @@
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="tfPoblacion" editable="true" layoutX="592.0" layoutY="110.0" prefHeight="26.0" prefWidth="219.0" stylesheets="@../../../img/boton.css" />
+                <TextField fx:id="tfPoblacion" editable="true" layoutX="592.0" layoutY="110.0" prefHeight="26.0" prefWidth="219.0"  />
                 <Label layoutX="519.0" layoutY="113.0" text="Población:">
                     <font>
                         <Font name="System Bold" size="14.0" />
@@ -179,17 +179,17 @@
         <Pane fx:id="pModificar" layoutX="1.0" layoutY="53.0" prefHeight="546.0" prefWidth="910.0" visible="false">
             <children>
                 <TableView fx:id="tvModMed" layoutX="240.0" layoutY="24.0" prefHeight="492.0" prefWidth="650.0" />
-                <Button id="idaccept" fx:id="bMedicos" layoutX="47.0" layoutY="54.0" mnemonicParsing="false" onAction="#cambiarPestanas" prefHeight="54.0" prefWidth="142.0" stylesheets="@../../../img/boton.css" text="Médicos">
+                <Button id="idaccept" fx:id="bMedicos" layoutX="47.0" layoutY="54.0" mnemonicParsing="false"  prefHeight="54.0" prefWidth="142.0"  text="Médicos">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Button>
-                <Button id="idaccept" fx:id="bPacientes" layoutX="47.0" layoutY="120.0" mnemonicParsing="false" onAction="#cambiarPestanas" prefHeight="54.0" prefWidth="142.0" stylesheets="@../../../img/boton.css" text="Pacientes">
+                <Button id="idaccept" fx:id="bPacientes" layoutX="47.0" layoutY="120.0" mnemonicParsing="false"  prefHeight="54.0" prefWidth="142.0"  text="Pacientes">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Button>
-                <Button id="idaccept" fx:id="bIngresos" layoutX="47.0" layoutY="189.0" mnemonicParsing="false" onAction="#cambiarPestanas" prefHeight="54.0" prefWidth="142.0" stylesheets="@../../../img/boton.css" text="Ingresos">
+                <Button id="idaccept" fx:id="bIngresos" layoutX="47.0" layoutY="189.0" mnemonicParsing="false"  prefHeight="54.0" prefWidth="142.0"  text="Ingresos">
                     <font>
                         <Font size="14.0" />
                     </font>
