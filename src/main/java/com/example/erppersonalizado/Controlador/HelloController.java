@@ -4,10 +4,13 @@ import com.example.erppersonalizado.Modelo.Conexion;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -17,7 +20,11 @@ import java.util.ResourceBundle;
 
 public class HelloController implements Initializable{
 
+        @FXML
+        private Button bCancelarCreacion;
 
+        @FXML
+        private Button bVentanaCrearBD;
         @FXML
         private Button bCrearBD;
 
@@ -89,6 +96,7 @@ public class HelloController implements Initializable{
         private TextField webCliente;
 
         Conexion cbd = new Conexion();
+        private int cont;
         @Override
         public void initialize(URL url, ResourceBundle rb) {
 
@@ -99,11 +107,14 @@ public class HelloController implements Initializable{
             Statement stmt = conexion.createStatement();
             String sql = "CREATE DATABASE "+tfNombreBD.getText();
             stmt.executeUpdate(sql);
+
+            anadirPanelesBD(tfNombreBD.getText()); // Método que crear el panel en la UI
+
             System.out.println("Base de datos creada.");
             popUpCrear.setVisible(false);
             conexion.close();
-            Connection conexion2 = cbd.conectarBD(tfNombreBD.getText());
 
+            Connection conexion2 = cbd.conectarBD(tfNombreBD.getText());
             Statement stmtCreacion = conexion2.createStatement();
             String sqlCreacion = "CREATE TABLE IF NOT EXISTS `cliente` (\n" +
                     "  `id_cliente` int(11) NOT NULL,\n" +
@@ -154,7 +165,34 @@ public class HelloController implements Initializable{
                 stmtCreacion.executeUpdate(sqlCreacion);
 
                 conexion2.close();
+        }
+        public void anadirPanelesBD(String nombreBD){ //Preguntar a larry como añadir aqui titulo y botón y to eso
+            //StackPane panelBD = new StackPane();
 
+            Text titulo = new Text(nombreBD);
+            //panelBD.setAlignment(titulo, Pos.TOP_LEFT);
+            Button bConectar = new Button("Conectar");
+            Button bEliminar = new Button("Eliminar");
+            //panelBD.setAlignment(bConectar,Pos.CENTER_RIGHT);
+            //panelBD.setAlignment(bEliminar,Pos.CENTER_LEFT);
+
+            //panelBD.getChildren().add(titulo);
+            //panelBD.getChildren().add(bConectar);
+            //panelBD.getChildren().add(bEliminar);
+
+            gpBD.add(titulo,0,cont,1,1);
+            gpBD.add(bEliminar,1,cont,1,1);
+            gpBD.add(bConectar,2,cont,1,1);
+            cont++;
+            //gpBD.add(panelBD,0,0,1,1);
+        }
+        @FXML
+        public void gestionVentanasBD(ActionEvent e){
+            if (e.getSource() == bCancelarCreacion){
+                popUpCrear.setVisible(false);
+            }else if(e.getSource() == bVentanaCrearBD){
+                popUpCrear.setVisible(true);
+            }
         }
     }
 

@@ -20,7 +20,6 @@ public class Conexion {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/", Usuario, Contraseña);
-            System.out.println("Conexion establecida");
         }catch (Exception e){
             System.out.println("Error: " + e);
         }
@@ -31,7 +30,6 @@ public class Conexion {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+nombreBD, Usuario, Contraseña);
-            System.out.println("Conexion establecida");
         }catch (Exception e){
             System.out.println("Error: " + e);
         }
