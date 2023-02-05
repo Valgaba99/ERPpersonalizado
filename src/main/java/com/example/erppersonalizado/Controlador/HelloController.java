@@ -77,7 +77,8 @@ public class HelloController implements Initializable{
 
         @FXML
         private TextField tfEmail;
-
+        @FXML
+        private Pane popUpCrear;
         @FXML
         private TextField tfEmail1;
 
@@ -99,6 +100,61 @@ public class HelloController implements Initializable{
             String sql = "CREATE DATABASE "+tfNombreBD.getText();
             stmt.executeUpdate(sql);
             System.out.println("Base de datos creada.");
+            popUpCrear.setVisible(false);
+            conexion.close();
+            Connection conexion2 = cbd.conectarBD(tfNombreBD.getText());
+
+            Statement stmtCreacion = conexion2.createStatement();
+            String sqlCreacion = "CREATE TABLE IF NOT EXISTS `cliente` (\n" +
+                    "  `id_cliente` int(11) NOT NULL,\n" +
+                    "  `nombre` varchar(50) DEFAULT NULL,\n" +
+                    "  `apellidos` varchar(50) DEFAULT NULL,\n" +
+                    "  `correo` varchar(50) DEFAULT NULL,\n" +
+                    "  `direccion` varchar(50) DEFAULT NULL,\n" +
+                    "  `telefono` int(9) DEFAULT NULL,\n" +
+                    "  PRIMARY KEY (`id_cliente`)\n" +
+                    ") ";
+            stmtCreacion.executeUpdate(sqlCreacion);
+            sqlCreacion = "CREATE TABLE IF NOT EXISTS `proveedor` (\n" +
+                    "  `id_proveedor` int(11) NOT NULL,\n" +
+                    "  `nombre` varchar(50) DEFAULT NULL,\n" +
+                    "  `correo` varchar(50) DEFAULT NULL,\n" +
+                    "  `direccion` varchar(50) DEFAULT NULL,\n" +
+                    "  `telefono` int(9) DEFAULT NULL,\n" +
+                    "  PRIMARY KEY (`id_proveedor`)\n" +
+                    ") ";
+            stmtCreacion.executeUpdate(sqlCreacion);
+            sqlCreacion = "CREATE TABLE IF NOT EXISTS `factura` (\n" +
+                    "  `id_factura` int(11) NOT NULL,\n" +
+                    "  `direccion` varchar(50) DEFAULT NULL,\n" +
+                    "  `precio` float DEFAULT NULL,\n" +
+                    "  `nombre_producto` float DEFAULT NULL,\n" +
+                    "  `numero_producto` float DEFAULT NULL,\n" +
+                    "  `fecha` date DEFAULT NULL,\n" +
+                    "  `id_cliente` int(11) DEFAULT NULL,\n" +
+                    "  `id_proveedor` int(11) DEFAULT NULL,\n" +
+                    "  PRIMARY KEY (`id_factura`),\n" +
+                    "  KEY `FK_factura_cliente` (`id_cliente`),\n" +
+                    "  KEY `FK_factura_proveedor` (`id_proveedor`),\n" +
+                    "  CONSTRAINT `FK_factura_cliente` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id_cliente`) ON DELETE NO ACTION ON UPDATE NO ACTION,\n" +
+                    "  CONSTRAINT `FK_factura_proveedor` FOREIGN KEY (`id_proveedor`) REFERENCES `proveedor` (`id_proveedor`) ON DELETE NO ACTION ON UPDATE NO ACTION\n" +
+                    ") ";
+            stmtCreacion.executeUpdate(sqlCreacion);
+                sqlCreacion = "CREATE TABLE IF NOT EXISTS `producto` (\n" +
+                        "  `id_producto` int(11) NOT NULL,\n" +
+                        "  `nombre` varchar(50) DEFAULT NULL,\n" +
+                        "  `tipo` varchar(50) DEFAULT NULL,\n" +
+                        "  `costo` float DEFAULT NULL,\n" +
+                        "  `precio` float DEFAULT NULL,\n" +
+                        "  `id_proveedor` int(11) DEFAULT NULL,\n" +
+                        "  PRIMARY KEY (`id_producto`),\n" +
+                        "  KEY `FK_producto_proveedor` (`id_proveedor`),\n" +
+                        "  CONSTRAINT `FK_producto_proveedor` FOREIGN KEY (`id_proveedor`) REFERENCES `proveedor` (`id_proveedor`) ON DELETE NO ACTION ON UPDATE NO ACTION\n" +
+                        ") ";
+                stmtCreacion.executeUpdate(sqlCreacion);
+
+                conexion2.close();
+
         }
     }
 

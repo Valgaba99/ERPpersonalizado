@@ -84,7 +84,6 @@
             <Label layoutX="512.0" layoutY="169.0" text="Página web:" />
             <Button id="eliminar" layoutX="835.0" layoutY="178.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" stylesheets="@../../../../boton.css">
                <graphic>
-                  <FontAwesomeIconView glyphName="TRASH" size="32" />
                </graphic>
             </Button>
             <Button id="save" layoutX="835.0" layoutY="113.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" stylesheets="@../../../../boton.css">
@@ -209,7 +208,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
             </GridPane>
-            <Pane layoutX="246.0" layoutY="181.0" prefHeight="226.0" prefWidth="484.0">
+            <Pane fx:id="popUpCrear" layoutX="246.0" layoutY="181.0" prefHeight="226.0" prefWidth="484.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="7.0" fill="WHITE" height="226.0" stroke="BLACK" strokeType="INSIDE" width="484.0" />
                   <Label layoutX="25.0" layoutY="30.0" text="Inserte un nombre para su BD :">
