@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -11,12 +10,16 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.erppersonalizado.Controlador.HelloController">
     <children>
-        <AnchorPane layoutY="-1.0" prefHeight="47.0" prefWidth="910.0">
+        <AnchorPane layoutY="-1.0" prefHeight="47.0" prefWidth="910.0" visible="false">
             <children>
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa840b2" height="54.0" layoutX="-1.0" layoutY="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="956.0" />
             <Button layoutX="73.0" layoutY="5.0" mnemonicParsing="false" styleClass="menu" stylesheets="@../../../../boton.css" text="Clientes" />
@@ -30,7 +33,6 @@
                 <MenuItem mnemonicParsing="false" text="Action 2" />
               </items>
                <graphic>
-                  <FontAwesomeIconView glyphName="USER" size="32" wrappingWidth="23.771379470825195" />
                </graphic>
             </MenuButton>
             <ImageView fitHeight="76.0" fitWidth="66.0" layoutX="-2.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
@@ -42,12 +44,12 @@
         </AnchorPane>
         <Pane fx:id="pMedico" layoutX="1.0" layoutY="49.0" prefHeight="571.0" prefWidth="965.0" visible="false">
          <children>
-            <TextField layoutX="72.0" layoutY="74.0" prefHeight="66.0" prefWidth="467.0" styleClass="textfield" stylesheets="@../../../../boton.css" />
-            <TextField layoutX="91.0" layoutY="163.0" prefHeight="26.0" prefWidth="355.0" />
+            <TextField fx:id="nombreCliente" layoutX="72.0" layoutY="74.0" prefHeight="66.0" prefWidth="467.0" styleClass="textfield" stylesheets="@../../../../boton.css" />
+            <TextField fx:id="direccionCliente" layoutX="91.0" layoutY="163.0" prefHeight="26.0" prefWidth="355.0" />
             <TextField layoutX="91.0" layoutY="293.0" prefHeight="20.0" prefWidth="219.0" />
-            <TextField layoutX="91.0" layoutY="247.0" prefHeight="20.0" prefWidth="219.0" />
-            <TextField layoutX="584.0" layoutY="164.0" prefHeight="20.0" prefWidth="219.0" />
-            <TextField layoutX="91.0" layoutY="202.0" prefHeight="20.0" prefWidth="219.0" />
+            <TextField fx:id="correoCliente" layoutX="91.0" layoutY="247.0" prefHeight="20.0" prefWidth="219.0" />
+            <TextField fx:id="webCliente" layoutX="584.0" layoutY="164.0" prefHeight="20.0" prefWidth="219.0" />
+            <TextField fx:id="telCliente" layoutX="91.0" layoutY="202.0" prefHeight="20.0" prefWidth="219.0" />
             <TableView layoutX="28.0" layoutY="345.0" prefHeight="226.0" prefWidth="910.0" />
             <Label layoutX="41.0" layoutY="24.0" prefHeight="38.0" prefWidth="160.0" styleClass="titulo" stylesheets="@../../../../boton.css" text="Clientes" />
             <Label layoutX="28.0" layoutY="168.0" text="Dirección:" />
@@ -57,12 +59,10 @@
             <Label layoutX="518.0" layoutY="169.0" text="Página web:" />
             <Button id="eliminar" layoutX="854.0" layoutY="194.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" stylesheets="@../../../../boton.css">
                <graphic>
-                  <FontAwesomeIconView glyphName="TRASH" size="32" />
                </graphic>
             </Button>
             <Button id="save" layoutX="853.0" layoutY="124.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" stylesheets="@../../../../boton.css">
                <graphic>
-                  <FontAwesomeIconView glyphName="SAVE" size="32" />
                </graphic>
             </Button>
          </children>
@@ -89,7 +89,6 @@
             </Button>
             <Button id="save" layoutX="835.0" layoutY="113.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" stylesheets="@../../../../boton.css">
                <graphic>
-                  <FontAwesomeIconView glyphName="SAVE" size="32" />
                </graphic>
             </Button>
          </children>
@@ -111,12 +110,10 @@
             <Label layoutX="513.0" layoutY="168.0" text="Página web:" />
             <Button id="eliminar" layoutX="829.0" layoutY="170.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" stylesheets="@../../../../boton.css">
                <graphic>
-                  <FontAwesomeIconView glyphName="TRASH" size="32" />
                </graphic>
             </Button>
             <Button id="save" layoutX="829.0" layoutY="103.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" stylesheets="@../../../../boton.css">
                <graphic>
-                  <FontAwesomeIconView glyphName="SAVE" size="32" />
                </graphic>
             </Button>
          </children>
@@ -130,12 +127,10 @@
             <Label layoutX="42.0" layoutY="14.0" prefHeight="38.0" prefWidth="160.0" styleClass="titulo" stylesheets="@../../../../boton.css" text="Pedidos" />
             <Button id="eliminar" layoutX="847.0" layoutY="173.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" stylesheets="@../../../../boton.css">
                <graphic>
-                  <FontAwesomeIconView glyphName="TRASH" size="32" />
                </graphic>
             </Button>
             <Button id="save" layoutX="846.0" layoutY="108.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" stylesheets="@../../../../boton.css">
                <graphic>
-                  <FontAwesomeIconView glyphName="SAVE" size="32" />
                </graphic>
             </Button>
             <Label layoutX="20.0" layoutY="167.0" text="Dirección:" />
@@ -185,7 +180,7 @@
                   <Image url="@../../../../fondo%20login.jpg" />
                </image>
             </ImageView>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="522.0" layoutX="294.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="349.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="522.0" layoutX="294.0" layoutY="26.0" stroke="WHITE" strokeType="INSIDE" width="349.0" />
             <ImageView fitHeight="179.0" fitWidth="187.0" layoutX="373.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../logo%20completo.png" />
@@ -196,6 +191,37 @@
             <Button id="login" fx:id="bLogin1" layoutX="377.0" layoutY="392.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="180.0" stylesheets="@../../../../boton.css" text="Acceder" />
             <Button id="registrar" fx:id="bRegistro1" layoutX="377.0" layoutY="438.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="180.0" stylesheets="@../../../../boton.css" text="Registrarse" />
             <TextField fx:id="tfContraseña11" layoutX="377.0" layoutY="323.0" prefHeight="38.0" prefWidth="180.0" promptText="Teléfono" />
+         </children>
+      </Pane>
+      <Pane prefHeight="650.0" prefWidth="956.0">
+         <children>
+            <Label layoutX="50.0" layoutY="40.0" prefHeight="58.0" prefWidth="291.0" text="Bases de datos">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button layoutX="362.0" layoutY="57.0" mnemonicParsing="false" text="Crear" />
+            <GridPane fx:id="gpBD" layoutX="62.0" layoutY="138.0" prefHeight="25.0" prefWidth="852.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Pane layoutX="246.0" layoutY="181.0" prefHeight="226.0" prefWidth="484.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="7.0" fill="WHITE" height="226.0" stroke="BLACK" strokeType="INSIDE" width="484.0" />
+                  <Label layoutX="25.0" layoutY="30.0" text="Inserte un nombre para su BD :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfNombreBD" layoutX="230.0" layoutY="28.0" prefHeight="26.0" prefWidth="219.0" />
+                  <Button fx:id="bCrearBD" layoutX="101.0" layoutY="148.0" mnemonicParsing="false" onAction="#creaBD" text="Aceptar" />
+                  <Button layoutX="318.0" layoutY="148.0" mnemonicParsing="false" text="Cancelar" />
+               </children>
+            </Pane>
          </children>
       </Pane>
     </children>

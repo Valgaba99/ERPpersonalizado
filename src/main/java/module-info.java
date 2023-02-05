@@ -5,5 +5,7 @@ module com.example.erppersonalizado {
 
 
     opens com.example.erppersonalizado to javafx.fxml;
+    opens com.example.erppersonalizado.Controlador to javafx.fxml;
+
     exports com.example.erppersonalizado;
 }

@@ -12,15 +12,25 @@ import java.sql.DriverManager;
  * @author ivanm
  */
 public class Conexion {
-    private static String URL = "jdbc:mysql://localhost:3306/hospital";
     private static String Usuario = "root";
     private static String Contraseña = "root";
     
-    public static Connection conectar(){
+    public static Connection conectarCreacion(){
         Connection conexion = null;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conexion = DriverManager.getConnection(URL, Usuario, Contraseña);
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/", Usuario, Contraseña);
+            System.out.println("Conexion establecida");
+        }catch (Exception e){
+            System.out.println("Error: " + e);
+        }
+        return conexion;
+    }
+    public static Connection conectarBD(String nombreBD){
+        Connection conexion = null;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+nombreBD, Usuario, Contraseña);
             System.out.println("Conexion establecida");
         }catch (Exception e){
             System.out.println("Error: " + e);
