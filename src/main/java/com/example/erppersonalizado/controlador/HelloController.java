@@ -1,4 +1,4 @@
-package com.example.erppersonalizado.controlador;
+package com.example.erppersonalizado.Controlador;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

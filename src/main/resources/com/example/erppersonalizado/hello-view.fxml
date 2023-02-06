@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.erppersonalizado.Controlador.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.erppersonalizado.Controlador.HelloController">
     <children>
         <AnchorPane layoutY="-1.0" prefHeight="47.0" prefWidth="910.0" visible="false">
             <children>
@@ -37,7 +37,7 @@
             </MenuButton>
             <ImageView fitHeight="76.0" fitWidth="66.0" layoutX="-2.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../logo%20sin%20letras%20sin%20fondo.png" />
+                  <Image url="@../../../../logo%20sin%20letras%20.png" />
                </image>
             </ImageView>
             </children>
