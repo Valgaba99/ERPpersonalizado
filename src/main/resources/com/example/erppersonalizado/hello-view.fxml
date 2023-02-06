@@ -19,7 +19,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.erppersonalizado.Controlador.HelloController">
     <children>
-        <AnchorPane layoutY="-1.0" prefHeight="47.0" prefWidth="910.0" visible="false">
+        <AnchorPane fx:id="pBarraNavegacion" layoutY="-1.0" prefHeight="47.0" prefWidth="910.0">
             <children>
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa840b2" height="54.0" layoutX="-1.0" layoutY="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="956.0" />
             <Button layoutX="73.0" layoutY="5.0" mnemonicParsing="false" styleClass="menu" stylesheets="@../../../../boton.css" text="Clientes" />
@@ -192,7 +192,7 @@
             <TextField fx:id="tfContraseña11" layoutX="377.0" layoutY="323.0" prefHeight="38.0" prefWidth="180.0" promptText="Teléfono" />
          </children>
       </Pane>
-      <Pane prefHeight="650.0" prefWidth="956.0">
+      <Pane fx:id="pBDs" prefHeight="650.0" prefWidth="956.0" visible="false">
          <children>
             <Label layoutX="50.0" layoutY="40.0" prefHeight="58.0" prefWidth="291.0" text="Bases de datos">
                <font>

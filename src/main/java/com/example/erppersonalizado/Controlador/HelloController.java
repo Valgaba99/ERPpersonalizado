@@ -2,11 +2,13 @@ package com.example.erppersonalizado.Controlador;
 
 import com.example.erppersonalizado.Modelo.Conexion;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -72,6 +74,11 @@ public class HelloController implements Initializable{
 
         @FXML
         private TextField telCliente;
+        @FXML
+        private Pane pBDs;
+
+        @FXML
+        private AnchorPane pBarraNavegacion;
 
         @FXML
         private TextField tfContraseña;
@@ -97,6 +104,7 @@ public class HelloController implements Initializable{
 
         Conexion cbd = new Conexion();
         private int cont;
+        private String bdConectada;
         @Override
         public void initialize(URL url, ResourceBundle rb) {
 
@@ -173,6 +181,15 @@ public class HelloController implements Initializable{
             //panelBD.setAlignment(titulo, Pos.TOP_LEFT);
             Button bConectar = new Button("Conectar");
             Button bEliminar = new Button("Eliminar");
+            bConectar.setOnAction(
+                    new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent actionEvent) {
+                            pBDs.setVisible(false);
+                            pBarraNavegacion.setVisible(true);
+                        }
+                    }
+            );
             //panelBD.setAlignment(bConectar,Pos.CENTER_RIGHT);
             //panelBD.setAlignment(bEliminar,Pos.CENTER_LEFT);
 
