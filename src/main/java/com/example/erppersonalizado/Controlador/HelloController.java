@@ -43,6 +43,8 @@ public class HelloController implements Initializable{
         private Button bRegistro1;
 
         @FXML
+        private Button bCrearUsuario;
+        @FXML
         private TextField correoCliente;
 
         @FXML
@@ -127,10 +129,10 @@ public class HelloController implements Initializable{
             String sqlCreacion = "CREATE TABLE IF NOT EXISTS `cliente` (\n" +
                     "  `id_cliente` int(11) NOT NULL,\n" +
                     "  `nombre` varchar(50) DEFAULT NULL,\n" +
-                    "  `apellidos` varchar(50) DEFAULT NULL,\n" +
                     "  `correo` varchar(50) DEFAULT NULL,\n" +
                     "  `direccion` varchar(50) DEFAULT NULL,\n" +
                     "  `telefono` int(9) DEFAULT NULL,\n" +
+                    "  `web` varchar(50) DEFAULT NULL,\n)"+
                     "  PRIMARY KEY (`id_cliente`)\n" +
                     ") ";
             stmtCreacion.executeUpdate(sqlCreacion);

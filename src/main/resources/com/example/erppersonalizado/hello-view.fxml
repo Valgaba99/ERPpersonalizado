@@ -172,7 +172,7 @@
             <Button id="registrar" fx:id="bRegistro" layoutX="389.0" layoutY="414.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="180.0" stylesheets="@../../../../boton.css" text="Registrarse" />
          </children>
       </Pane>
-      <Pane fx:id="pInicio1" layoutX="10.0" layoutY="10.0" prefHeight="650.0" prefWidth="955.0" visible="false">
+      <Pane fx:id="pInicio1" layoutX="10.0" layoutY="10.0" prefHeight="650.0" prefWidth="955.0">
          <children>
             <ImageView fitHeight="660.0" fitWidth="966.0" layoutX="-18.0" layoutY="-19.0" pickOnBounds="true">
                <image>
@@ -185,11 +185,11 @@
                   <Image url="@../../../../logo%20completo.png" />
                </image>
             </ImageView>
-            <TextField fx:id="tfEmail1" layoutX="378.0" layoutY="228.0" prefHeight="38.0" prefWidth="180.0" promptText="Email" />
-            <TextField fx:id="tfContraseña1" layoutX="378.0" layoutY="275.0" prefHeight="38.0" prefWidth="180.0" promptText="Contraseña" />
-            <Button id="login" fx:id="bLogin1" layoutX="377.0" layoutY="392.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="180.0" stylesheets="@../../../../boton.css" text="Acceder" />
-            <Button id="registrar" fx:id="bRegistro1" layoutX="377.0" layoutY="438.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="180.0" stylesheets="@../../../../boton.css" text="Registrarse" />
-            <TextField fx:id="tfContraseña11" layoutX="377.0" layoutY="323.0" prefHeight="38.0" prefWidth="180.0" promptText="Teléfono" />
+            <TextField fx:id="tfEmail1" layoutX="379.0" layoutY="283.0" prefHeight="38.0" prefWidth="180.0" promptText="Email" />
+            <TextField fx:id="tfContraseña1" layoutX="379.0" layoutY="330.0" prefHeight="38.0" prefWidth="180.0" promptText="Contraseña" />
+            <Button id="login" fx:id="bCrearUsuario" layoutX="378.0" layoutY="452.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="180.0" stylesheets="@../../../../boton.css" text="Crear Usuario" />
+            <TextField fx:id="tfContraseña11" layoutX="378.0" layoutY="378.0" prefHeight="38.0" prefWidth="180.0" promptText="Teléfono" />
+            <TextField fx:id="tfContraseña111" layoutX="380.0" layoutY="234.0" prefHeight="38.0" prefWidth="180.0" promptText="Nombre" />
          </children>
       </Pane>
       <Pane fx:id="pBDs" prefHeight="650.0" prefWidth="956.0" visible="false">
