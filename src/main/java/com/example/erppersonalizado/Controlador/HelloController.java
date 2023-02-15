@@ -2,11 +2,13 @@ package com.example.erppersonalizado.Controlador;
 
 import com.example.erppersonalizado.Modelo.Conexion;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -41,6 +43,8 @@ public class HelloController implements Initializable{
         private Button bRegistro1;
 
         @FXML
+        private Button bCrearUsuario;
+        @FXML
         private TextField correoCliente;
 
         @FXML
@@ -72,6 +76,11 @@ public class HelloController implements Initializable{
 
         @FXML
         private TextField telCliente;
+        @FXML
+        private Pane pBDs;
+
+        @FXML
+        private AnchorPane pBarraNavegacion;
 
         @FXML
         private TextField tfContraseña;
@@ -97,8 +106,17 @@ public class HelloController implements Initializable{
 
         Conexion cbd = new Conexion();
         private int cont;
+        private String bdConectada;
+        private String nombreBD;
         @Override
         public void initialize(URL url, ResourceBundle rb) {
+
+        }
+        @FXML
+        void crearUsuario(ActionEvent e) throws SQLException {
+            Connection conexion = cbd.conexionCrearUs();
+            Statement stmt = conexion.createStatement();
+           // String sql = "INSERT INTO USUARIOS(NOMBRE,EMAIL,TELEFONO,CONTRASEÑA)VALUES("+
 
         }
         @FXML
@@ -119,10 +137,10 @@ public class HelloController implements Initializable{
             String sqlCreacion = "CREATE TABLE IF NOT EXISTS `cliente` (\n" +
                     "  `id_cliente` int(11) NOT NULL,\n" +
                     "  `nombre` varchar(50) DEFAULT NULL,\n" +
-                    "  `apellidos` varchar(50) DEFAULT NULL,\n" +
                     "  `correo` varchar(50) DEFAULT NULL,\n" +
                     "  `direccion` varchar(50) DEFAULT NULL,\n" +
                     "  `telefono` int(9) DEFAULT NULL,\n" +
+                    "  `web` varchar(50) DEFAULT NULL,\n)"+
                     "  PRIMARY KEY (`id_cliente`)\n" +
                     ") ";
             stmtCreacion.executeUpdate(sqlCreacion);
@@ -166,25 +184,27 @@ public class HelloController implements Initializable{
 
                 conexion2.close();
         }
-        public void anadirPanelesBD(String nombreBD){ //Preguntar a larry como añadir aqui titulo y botón y to eso
-            //StackPane panelBD = new StackPane();
+        public void anadirPanelesBD(String nombreBD){
 
             Text titulo = new Text(nombreBD);
-            //panelBD.setAlignment(titulo, Pos.TOP_LEFT);
             Button bConectar = new Button("Conectar");
+            bConectar.setId("conectar"+nombreBD);
+            this.nombreBD = nombreBD;
             Button bEliminar = new Button("Eliminar");
-            //panelBD.setAlignment(bConectar,Pos.CENTER_RIGHT);
-            //panelBD.setAlignment(bEliminar,Pos.CENTER_LEFT);
-
-            //panelBD.getChildren().add(titulo);
-            //panelBD.getChildren().add(bConectar);
-            //panelBD.getChildren().add(bEliminar);
+            bConectar.setOnAction(
+                    new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent actionEvent) {
+                            pBDs.setVisible(false);
+                            pBarraNavegacion.setVisible(true);
+                        }
+                    }
+            );
 
             gpBD.add(titulo,0,cont,1,1);
             gpBD.add(bEliminar,1,cont,1,1);
             gpBD.add(bConectar,2,cont,1,1);
             cont++;
-            //gpBD.add(panelBD,0,0,1,1);
         }
         @FXML
         public void gestionVentanasBD(ActionEvent e){
