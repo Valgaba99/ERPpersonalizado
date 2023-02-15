@@ -107,8 +107,16 @@ public class HelloController implements Initializable{
         Conexion cbd = new Conexion();
         private int cont;
         private String bdConectada;
+        private String nombreBD;
         @Override
         public void initialize(URL url, ResourceBundle rb) {
+
+        }
+        @FXML
+        void crearUsuario(ActionEvent e) throws SQLException {
+            Connection conexion = cbd.conexionCrearUs();
+            Statement stmt = conexion.createStatement();
+           // String sql = "INSERT INTO USUARIOS(NOMBRE,EMAIL,TELEFONO,CONTRASEÑA)VALUES("+
 
         }
         @FXML
@@ -176,12 +184,12 @@ public class HelloController implements Initializable{
 
                 conexion2.close();
         }
-        public void anadirPanelesBD(String nombreBD){ //Preguntar a larry como añadir aqui titulo y botón y to eso
-            //StackPane panelBD = new StackPane();
+        public void anadirPanelesBD(String nombreBD){
 
             Text titulo = new Text(nombreBD);
-            //panelBD.setAlignment(titulo, Pos.TOP_LEFT);
             Button bConectar = new Button("Conectar");
+            bConectar.setId("conectar"+nombreBD);
+            this.nombreBD = nombreBD;
             Button bEliminar = new Button("Eliminar");
             bConectar.setOnAction(
                     new EventHandler<ActionEvent>() {
@@ -192,18 +200,11 @@ public class HelloController implements Initializable{
                         }
                     }
             );
-            //panelBD.setAlignment(bConectar,Pos.CENTER_RIGHT);
-            //panelBD.setAlignment(bEliminar,Pos.CENTER_LEFT);
-
-            //panelBD.getChildren().add(titulo);
-            //panelBD.getChildren().add(bConectar);
-            //panelBD.getChildren().add(bEliminar);
 
             gpBD.add(titulo,0,cont,1,1);
             gpBD.add(bEliminar,1,cont,1,1);
             gpBD.add(bConectar,2,cont,1,1);
             cont++;
-            //gpBD.add(panelBD,0,0,1,1);
         }
         @FXML
         public void gestionVentanasBD(ActionEvent e){
